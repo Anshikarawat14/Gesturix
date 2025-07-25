@@ -1,70 +1,75 @@
+# Gesture Control Assistant
 
+Welcome to the Gesture Control Assistant! This project allows you to control your computer using hand gestures detected via your webcam. It leverages computer vision and machine learning to recognize hand gestures and map them to mouse and system control actions, such as moving the cursor, clicking, scrolling, and adjusting volume or brightness.
 
-# Gesture Controlled Virtual Mouse &nbsp;[![](https://img.shields.io/badge/python-3.8.5-blue.svg)](https://www.python.org/downloads/) [![platform](https://img.shields.io/badge/platform-windows-green.svg)](https://github.com/xenon-19/Gesture_Controller)
+## Features
 
-Welcome to my Gesture Controlled Virtual Mouse project! This tool transforms the way you interact with your computer by letting you control your mouse and perform various actions using just your hand gestures and voice commands. No need for extra hardware—just your webcam and microphone are enough. The system uses advanced machine learning and computer vision techniques to recognize your gestures and voice, making everyday computer tasks more intuitive and touch-free.
+- **Hand Gesture Recognition:** Uses your webcam to detect and interpret hand gestures in real time.
+- **Virtual Mouse Control:** Move the mouse, left/right/double click, and drag & drop using gestures.
+- **Scrolling:** Scroll vertically and horizontally with pinch gestures.
+- **System Volume & Brightness Control:** Adjust system volume and screen brightness with specific gestures.
+- **No Extra Hardware Needed:** Only a webcam is required.
 
-With this project, you can move your cursor, click, scroll, drag and drop, adjust volume and brightness, and even use a built-in voice assistant for tasks like searching Google, navigating files, and more. Whether you want to boost productivity, improve accessibility, or just try something cool, this project is designed to be easy to use and fun to explore.
+## Requirements
 
-_Note: This project is optimized for Windows and Python 3.8.5._
-
-# Features
-
-### Gesture Recognition
-- **Neutral Gesture:** Instantly stop or pause gesture recognition with an open palm.
-- **Move Cursor:** Move your hand to control the mouse pointer naturally and smoothly.
-- **Left/Right/Double Click:** Perform mouse clicks with simple, distinct hand gestures.
-- **Scrolling:** Scroll vertically or horizontally by pinching and moving your hand.
-- **Drag and Drop:** Pick up and move files or items with a dedicated gesture.
-- **Multiple Item Selection:** Select several items at once using a special gesture.
-- **Volume & Brightness Control:** Adjust system volume or screen brightness dynamically with pinch gestures.
-
-
-
-# Getting Started
-
-### Prerequisites
+- Windows OS
 - Python 3.6–3.8.5
-- Anaconda (recommended for easy environment management)
+- Webcam
 
-### Setup Instructions
-```bash
-git clone https://github.com/xenon-19/Gesture-Controlled-Virtual-Mouse.git
-```
-1. Create a new environment:
-```bash
-conda create --name gest python=3.8.5
-```
-2. Activate the environment:
-```bash
-conda activate gest
-```
-3. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-4. Install additional packages:
-```bash
-conda install PyAudio
-conda install pywin32
-```
-5. Change directory to the src folder:
-```
-cd path/to/Gesture-Controlled-Virtual-Mouse/src
-```
-6. To run the Voice Assistant:
-```bash
-python Proton.py
-```
-(Enable gesture recognition by saying "Proton Launch Gesture Recognition")
+## Installation
 
-Or, to run only gesture recognition:
-- Uncomment the last two lines in `Gesture_Controller.py`
-```bash
-python Gesture_Controller.py
-```
+1. **Clone the repository:**
+   ```bash
+   git clone <your-repo-url>
+   cd Gesture_control_assistant-main
+   ```
 
+2. **(Recommended) Create a virtual environment:**
+   ```bash
+   python -m venv myenv
+   myenv\Scripts\activate  # On Windows
+   ```
 
-# License
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Install additional system packages if needed:**
+   - For audio and brightness control, you may need:
+     ```bash
+     pip install pycaw screen_brightness_control
+     ```
+
+## Usage
+
+1. **Navigate to the `src` directory:**
+   ```bash
+   cd src
+   ```
+
+2. **Run the gesture controller:**
+   ```bash
+   python Gesture_Controller.py
+   ```
+
+   - The webcam window will open, and you can start using hand gestures to control your system.
+
+3. **(Optional) For voice assistant or other features:**
+   - If you have a voice assistant script (e.g., `Proton.py`), run it as needed.
+
+## How It Works
+
+- The system uses MediaPipe for hand tracking and gesture recognition.
+- Gestures are mapped to actions such as mouse movement, clicks, scrolling, and system controls.
+- The code is modular and can be extended for more gestures or actions.
+
+## Notes
+
+- This project is optimized for Windows.
+- Make sure your webcam is connected and accessible.
+- Some features (like brightness control) may require administrator privileges.
+
+## License
+
 This project is open source and free to use for personal and educational purposes.
-  
