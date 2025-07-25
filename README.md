@@ -70,6 +70,5 @@ Welcome to the Gesture Control Assistant! This project allows you to control you
 - Make sure your webcam is connected and accessible.
 - Some features (like brightness control) may require administrator privileges.
 
-## License
-
-This project is open source and free to use for personal and educational purposes.
+## BY Anshika Rawat :) 
+star if it helped
